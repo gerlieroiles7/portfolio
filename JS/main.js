@@ -55,9 +55,21 @@ ScrollReveal().reveal('.home-contact p, about-content', { origin: 'right' });
 
 /*========================= typed js ===================================== */
 const typed = new Typed('.multiple-text', {
-    strings: ['Fullstack Developer', 'Application Developer', 'WordPress Developer'],
+    strings: ['Software Developer', 'Web Developer', 'Full-stack Developer'],
     typeSpeed: 70,
     backSpeed: 70,
     backDelay: 1000,
     loop: true,
 });
+
+/*===============================Navbar active link =====================*/
+// Select all nav links
+const navLink = document.querySelectorAll(".navbar a");
+
+navLink.forEach(link => {
+    link.addEventListener("click", () => {
+      navLink.forEach(nav => nav.classList.remove("active"));
+      link.classList.add("active");
+    });
+  });
+
