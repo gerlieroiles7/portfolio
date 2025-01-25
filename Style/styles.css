@@ -425,6 +425,19 @@ span {
     color: var(--snd-bg-color);
 }
 
+.icon-container {
+    display: flex;
+    justify-content: left;
+    gap: 1rem; /* Space between icons */
+    flex-wrap: wrap; /* Allows icons to wrap on smaller screens */
+  }
+
+  .responsive-icon {
+    width: 100px; /* Adjust size as needed */
+    max-width: 150px; /* Ensure icons don't get too large */
+    height: 150px; /* Maintain aspect ratio */
+  }
+  
 /*BREAKPOINT*/
 
 @media (max-width: 1200px) {
@@ -440,6 +453,7 @@ span {
 
     section {
         padding: 10rem 3%;
+        min-height: 50vh;
     }
 
     .services {
@@ -527,9 +541,14 @@ span {
     .portfolio-container {
         grid-template-columns: repeat(2, 1fr);
     }
+    .responsive-icon {
+        width: 100px; /* Adjust size as needed */
+    }
+      
 }
 
 @media (max-width: 617px) {
+    
     .portfolio-container {
         grid-template-columns: 1fr;
     }
@@ -554,5 +573,8 @@ span {
         width: 100%;
     }
 
+    .icon-container {
+        justify-content: center;
+    }
 
 }
